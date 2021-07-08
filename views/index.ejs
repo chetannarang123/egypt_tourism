@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+
+  <title>Explore Egypt</title>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+  </script>
+
+</head>
+
+
+<body class="light-theme">
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <label class="switch"> Dark Mode
+            <i class="fas fa-adjust"></i>
+            <div>
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </div>
+          </label>
+        </li>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/history">History</a></li>
+        <li><a href="/famousplaces">Famous Place</a></li>
+        <li><a href="/restaurants">Restaurants</a></li>
+        <li><a href="/economy">Economy</a></li>
+        <li><a href="/geography">Geography</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div>
+      <img src="/images/egypt1.jpg" alt="Kurukshetra" width=auto height=auto>
+    </div>
+  </main>
+
+  <h1 class="history-heading2">About Egypt</h3>
+    <p class="history-para">
+    </br>
+      Egypt (/ˈiːdʒɪpt/ (About this soundlisten) EE-jipt; Arabic: مِصر‎, romanized: Miṣr), officially the Arab Republic
+      of Egypt, is a transcontinental country spanning the northeast corner of Africa and southwest corner of Asia by a
+      land bridge formed by the Sinai Peninsula. Egypt is a Mediterranean country bordered by the Gaza Strip (Palestine)
+      and Israel to the northeast, the Gulf of Aqaba and the Red Sea to the east, Sudan to the south, and Libya to the
+      west. Across the Gulf of Aqaba lies Jordan, across the Red Sea lies Saudi Arabia, and across the Mediterranean lie
+      Greece, Turkey and Cyprus, although none share a land border with Egypt.
+    </br>
+    </br>
+      Egypt has one of the longest histories of any country, tracing its heritage along the Nile Delta back to the
+      6th–4th millennia BCE. Considered a cradle of civilisation, Ancient Egypt saw some of the earliest developments of
+      writing, agriculture, urbanisation, organised religion and central government.[12] Iconic monuments such as the
+      Giza Necropolis and its Great Sphinx, as well the ruins of Memphis, Thebes, Karnak, and the Valley of the Kings,
+      reflect this legacy and remain a significant focus of scientific and popular interest. Egypt's long and rich
+      cultural heritage is an integral part of its national identity, which reflects its unique transcontinental
+      location being all Mediterranean, Middle Eastern and North African.[13] Egypt was an early and important centre of
+      Christianity, but was largely Islamised in the seventh century and remains a predominantly Muslim country, albeit
+      with a significant Christian minority.
+    </br>
+    </br>
+      Modern Egypt dates back to 1922, when it gained independence from the British Empire as a monarchy. Following the
+      1952 revolution, Egypt declared itself a republic, and in 1958 it merged with Syria to form the United Arab
+      Republic, which dissolved in 1961. Throughout the second half of the 20th century, Egypt endured social and
+      religious strife and political instability, fighting several armed conflicts with Israel in 1948, 1956, 1967 and
+      1973, and occupying the Gaza Strip intermittently until 1967. In 1978, Egypt signed the Camp David Accords,
+      officially withdrawing from the Gaza Strip and recognising Israel. The country continues to face challenges, from
+      political unrest, including the recent 2011 revolution and its aftermath, to terrorism and economic
+      underdevelopment. Egypt's current government, a semi-presidential republic has been described by a number of
+      watchdogs as authoritarian or heading an authoritarian regime, responsible for perpetuating the country's
+      problematic human rights record.
+    </br>
+     </br>
+    </p>
+
+    </br>
+          
+<form class="form-horizontal" role="form" method="post" action="/" enctype="multipart/form-data">
+                            <% if (message.length > 0) { %>
+                                <div class="alert alert-success col-sm-12"><%= message %></div>
+                            <% } %>
+                            <div id="signupalert" style="display:none" class="alert alert-danger">
+                                <p>Error:</p>
+                                <span></span>
+                            </div>
+                            <h1> You can upload images here</h1>
+                            </br>
+                            <div class="form-group">
+                                
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="file" name="uploaded_image" accept=""/>
+                                </div>
+                            </div>                                
+                            <div class="form-group">
+                                <!-- Button -->                                       
+                                <div class="col-md-offset-3 col-md-9">
+                                </br>
+                                    <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp upload image &nbsp </button>
+                                </div>
+                            </div>  
+                        </form>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" style="padding-top:30px">
+        <% if (message.length > 0) { %>
+        
+        <% } else {%>
+          <div class="panel panel-info">
+            <div class="panel-body">
+              <div class="grid">
+              
+              <% for(var i=0;i<data.length;i++){ %>
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://localhost:3000/upload_images/<%= data[i].image_name%>" class="img-circle img-responsive"> </div>
+ <% } %>
+                <div class=" col-md-9 col-lg-9 "> 
+                </div>
+              </div>
+            </div>
+          </div>
+        <% } %>
+        </div>
+      </div>
+
+        <footer>
+
+        </footer>
+        <script type="text/javascript" src="/javascripts/script.js"></script>
+
+</body>
+
+</html>

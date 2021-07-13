@@ -3,8 +3,8 @@ var router = express.Router();
 var im = require('imagemagick');
 var path = require('path');
 var sizeOf = require('image-size');
-var res_height = 10800;
-var res_width = 19200;
+var res_height = 1080;
+var res_width = 1920;
 var fs = require("fs");
 
 
